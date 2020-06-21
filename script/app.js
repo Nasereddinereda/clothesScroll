@@ -1,7 +1,7 @@
 var tl = new TimelineMax({ onUpdate: updatePercentage });
 var tl2 = new TimelineMax({ onUpdate: updatePercentage });
 var tl3 = new TimelineMax({ onUpdate: updatePercentage });
-let bool = true ; 
+
 const controller = new ScrollMagic.Controller();
 let h_full = window.innerHeight  ;
 let w_full = window.innerWidth  ;
@@ -10,9 +10,13 @@ let w_full = window.innerWidth  ;
 if (w_full >= 568){
     tl.to("#shirt", 1, { y: h_full / 2, x: (w_full / 2) - (w_full / 5), ease: Circ.easeInOut })
     tl2.to("#suit", 1, { y: h_full / 2, x: -((w_full / 2) - (w_full / 5) - (w_full / 100)), ease: Circ.easeInOut })
+    document.getElementById("suit").className = "";
+    document.getElementById("shirt").className = "";
 } else {
     tl.to("#shirt", 1, { y: h_full / 2, x:  (w_full/4) , ease: Circ.easeInOut })
     tl2.to("#suit", 1, { y: h_full / 2, x: -(w_full/4) , ease: Circ.easeInOut })
+    document.getElementById("suit").className = "";
+    document.getElementById("shirt").className = "";
 }
 
 
@@ -67,23 +71,17 @@ const scene3 = new ScrollMagic.Scene({
     duration: "70%"
 })
     .on("end" , function(){
-        document.getElementById("body").src ="/img/bodyAF.png";
-
-        if(bool === true){
-            setTimeout(function () {
-                bool = false;
-                document.getElementById("both").className = "d-none";
-
-            }, 100);
-        } else{
-            document.getElementById("both").className = "d-none";
-        }
+        document.getElementById("bodyAF").className ="";
+        document.getElementById("bodyBF").className ="d-none";
+        document.getElementById("both").className = "d-none";
+        
 
 
     })
     .on("progress" , function(){
+        document.getElementById("bodyAF").className = "d-none";
+        document.getElementById("bodyBF").className = "";
         document.getElementById("both").className = "";
-        document.getElementById("body").src = "/img/bodyBF.png";
     })
     .addIndicators()
     .setTween(tl3)
@@ -91,17 +89,14 @@ const scene3 = new ScrollMagic.Scene({
 
 
 function updatePercentage() {
-    //percent.innerHTML = (tl.progress() *100 ).toFixed();
+
     tl.progress();
     tl2.progress();
     tl3.progress();
-    // tl4.progress();
+  
 }
 
 
-function runFunction() {
-    console.log("hay");
-}
 
 
 
