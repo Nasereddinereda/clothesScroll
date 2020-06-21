@@ -1,0 +1,109 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    /* background: y; */
+}
+
+.d-none{
+    display: none;
+}
+
+
+/* Up Down Section   */
+
+#up , #down {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: gainsboro; */
+
+}
+
+#down{
+    /* background-color: aliceblue; */
+    margin-top: 50vh;
+}
+
+#up h1 , #down h1{
+font-size: 3em ;
+}
+
+/* Section 1  */
+
+#shirt , #suit , #both {
+    top: 10vh;
+    width: 20vw;
+    height: 40vh;
+    position: absolute;
+    
+}
+
+#shirt{
+    left: 10vw;
+    /* top : 61vh ; */
+    z-index: 5 ;
+}
+#suit{
+    right: 10vw;
+    /* top : 60vh ; */
+    z-index: 10 ;
+}
+
+#both{
+    top : 60vh ;
+    left: 40vw;
+    z-index: 15 ;
+}
+
+
+
+
+
+
+
+#sticky{
+    height: 50vh;
+}
+
+
+#sticky2{
+    height: 50vh;
+}
+
+
+#body{
+    left: 40.9vw;
+    top: 420vh ;
+    width:20vw ;
+    height: 80vh;
+    position: absolute;
+    z-index: 0 ;
+}
+ 
+
+
+
+/* #sticky header {
+display: flex;
+justify-content: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
+#sticky header .content div {
+
+}
+
+#sticky header .content div img {
+    width: 100%;
+    height: 100%;
+} */
