@@ -7,12 +7,12 @@ let h_full = window.innerHeight  ;
 let w_full = window.innerWidth  ;
 
 
-if (w_full <= 568){
+if (w_full >= 568){
     tl.to("#shirt", 1, { y: h_full / 2, x: (w_full / 2) - (w_full / 5), ease: Circ.easeInOut })
     tl2.to("#suit", 1, { y: h_full / 2, x: -((w_full / 2) - (w_full / 5) - (w_full / 100)), ease: Circ.easeInOut })
 } else {
-    tl.to("#shirt", 1, { y: h_full / 2, x:  (w_full/5) , ease: Circ.easeInOut })
-    tl2.to("#suit", 1, { y: h_full / 2, x: -(w_full/5) , ease: Circ.easeInOut })
+    tl.to("#shirt", 1, { y: h_full / 2, x:  (w_full/4) , ease: Circ.easeInOut })
+    tl2.to("#suit", 1, { y: h_full / 2, x: -(w_full/4) , ease: Circ.easeInOut })
 }
 
 
