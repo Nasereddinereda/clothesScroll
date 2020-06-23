@@ -33,32 +33,32 @@ font-size: 3em ;
 
 #shirt , #suit , #both {
     top: 10vh;
-    width: 20vw;
-    height: 40vh;
+    width: 14vw;
+    height: 34vh;
     position: absolute;
     
 }
 
 #shirt{
-    left: 10vw;
+    left: 20vw;
     /* top : 61vh ; */
     z-index: 5 ;
 }
 #suit{
-    right: 10vw;
+    right: 20vw;
     /* top : 60vh ; */
     z-index: 10 ;
 }
 
 #both{
-    top : 60vh ;
-    left: 40vw;
+    top : 35vh ;
+    left: 43vw;
     z-index: 15 ;
 }
 
 
 #sticky{
-    height: 50vh;
+    height: 25vh;
 }
 
 
@@ -68,10 +68,10 @@ font-size: 3em ;
 
 
 #bodyBF , #bodyAF{
-    left: 40.9vw;
-    top: 420vh ;
-    width:20vw ;
-    height: 80vh;
+    left: 43.5vw;
+    top: 365vh ;
+    width:14vw ;
+    height: 78vh;
     position: absolute;
     z-index: 0 ;
 }
@@ -94,12 +94,19 @@ font-size: 3em ;
 
 #both{
     left: 30vw;
+    top: 60vh;
 }
 
 #bodyBF , #bodyAF{
     left: 31.7vw;
     width:40vw ;
+    top: 390vh ;
 }
+
+#sticky{
+    height: 50vh;
+}
+
  
 
 }
